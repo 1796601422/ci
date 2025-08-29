@@ -1,0 +1,112 @@
+.module2-container {
+  width: 1600px;
+  height: 900px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.module2-header {
+  background: var(--gradient-secondary);
+  color: white;
+  padding: 15px 30px;
+  flex-shrink: 0;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+.module2-header .header-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.module2-header .back-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.module2-header .back-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateX(-2px);
+}
+
+.module2-header .header-text {
+  text-align: center;
+  flex: 1;
+}
+
+.module2-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+}
+
+.module2-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.module2-header p {
+  font-size: 0.95rem;
+  opacity: 0.95;
+  font-weight: 400;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.module2-main {
+  display: flex;
+  height: 810px;
+  background: var(--neutral-50);
+  overflow: hidden;
+}
+
+.module2-left {
+  width: 600px;
+  padding: 20px;
+  background: white;
+  border-right: 1px solid var(--neutral-200);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.module2-left::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, var(--neutral-200) 0%, transparent 50%, var(--neutral-200) 100%);
+}
+
+.module2-right {
+  width: 1000px;
+  padding: 20px;
+  background: var(--neutral-50);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}

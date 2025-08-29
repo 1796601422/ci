@@ -1,0 +1,219 @@
+/* 原有的导航容器样式 - 保持兼容 */
+.navigation-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* 新的首页左右布局 */
+.homepage-container {
+  display: flex;
+  flex-direction: row !important; /* 覆盖默认的column方向 */
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.homepage-left {
+  width: 600px;
+  min-width: 600px;
+  max-width: 600px;
+  padding: 30px;
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 50%, #93c5fd 100%);
+  border-right: 1px solid var(--neutral-200);
+  box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.5), 2px 0 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-y: auto;
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.homepage-left::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, transparent 0%, var(--neutral-200) 50%, transparent 100%);
+}
+
+.homepage-right {
+  flex: 1;
+  min-width: 0;
+  width: calc(100% - 600px);
+  background: var(--neutral-50);
+  position: relative;
+  z-index: 1;
+}
+
+.app-header {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  flex-shrink: 0;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--neutral-200);
+  position: relative;
+}
+
+.app-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+}
+
+.app-header.module2-header {
+  background: var(--gradient-secondary);
+  height: 50px;
+  padding: 10px 20px;
+}
+
+.app-header.module3-header {
+  background: var(--gradient-accent);
+  height: 50px;
+  padding: 10px 20px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.back-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  flex-shrink: 0;
+  backdrop-filter: blur(10px);
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.next-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  flex-shrink: 0;
+  backdrop-filter: blur(10px);
+}
+
+.next-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.complete-btn {
+  background: linear-gradient(135deg, #10b981, #059669);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+}
+
+.complete-btn:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+}
+
+.header-text {
+  flex: 1;
+  text-align: center;
+}
+
+.header-text h1 {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-text p {
+  font-size: 0.95rem;
+  opacity: 0.95;
+  font-weight: 400;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.app-main {
+  display: flex;
+  height: 810px;
+  background: var(--neutral-50);
+  overflow: hidden;
+  justify-content: center;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.left-panel {
+  width: 600px;
+  padding: 20px;
+  background: white;
+  border-right: 1px solid var(--neutral-200);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.left-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, var(--neutral-200) 0%, transparent 50%, var(--neutral-200) 100%);
+}
+
+.right-panel {
+  width: 1000px;
+  padding: 20px;
+  background: var(--neutral-50);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* 1920x1080 固定布局 - 无需响应式 */

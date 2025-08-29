@@ -1,0 +1,271 @@
+.math-principle-explanation {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.explanation-header h2 {
+  color: #1e293b;
+  margin: 0 0 6px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.explanation-header p {
+  color: #64748b;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.principle-card {
+  background: white;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.principle-card h3 {
+  color: #374151;
+  margin: 0 0 12px 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.principle-content ul {
+  margin: 8px 0 0 0;
+  padding-left: 18px;
+  color: #4b5563;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.principle-content li {
+  margin-bottom: 6px;
+}
+
+.principle-content strong {
+  color: #374151;
+  font-weight: 600;
+}
+
+/* 向量坐标样式 */
+.vector-coordinates {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.coord-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border-left: 3px solid #e2e8f0;
+}
+
+.coord-item.result {
+  background: linear-gradient(135deg, #f3e8ff 0%, #e0e7ff 100%);
+  border-left-color: #8b5cf6;
+  font-weight: 600;
+}
+
+.word-label {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: white;
+}
+
+.word-label.add {
+  background: #10b981;
+}
+
+.word-label.subtract {
+  background: #ef4444;
+}
+
+.word-label.result {
+  background: #8b5cf6;
+}
+
+.coord-value {
+  font-family: 'Monaco', 'Consolas', monospace;
+  font-size: 0.9rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+/* 计算步骤样式 */
+.calculation-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.step-number {
+  min-width: 24px;
+  height: 24px;
+  background: #667eea;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.result-step .step-number {
+  background: #10b981;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-title {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+.step-formula {
+  background: #f8fafc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.formula-text {
+  font-family: 'Monaco', 'Consolas', monospace;
+  font-size: 0.85rem;
+  color: #4b5563;
+  line-height: 1.4;
+}
+
+.result-highlight {
+  color: #8b5cf6;
+  font-weight: 600;
+}
+
+/* 语义解释样式 */
+.semantic-explanation {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.semantic-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.semantic-icon {
+  font-size: 1.2rem;
+  margin-top: 2px;
+}
+
+.semantic-content {
+  flex: 1;
+}
+
+.semantic-title {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.semantic-text {
+  font-family: 'Monaco', 'Consolas', monospace;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+.semantic-desc {
+  color: #4b5563;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* 动画信息样式 */
+.animation-info {
+  background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
+  border: 2px solid #667eea;
+}
+
+.animation-info h3 {
+  color: #4338ca;
+}
+
+.animation-description p {
+  color: #4b5563;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.animation-description ul {
+  margin: 8px 0;
+  padding-left: 18px;
+}
+
+.animation-description li {
+  color: #4b5563;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+.tip {
+  background: rgba(102, 126, 234, 0.1);
+  border-left: 3px solid #667eea;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #4338ca;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+/* 3D坐标系信息样式 */
+.coordinate-info {
+  margin: 16px 0;
+  padding: 12px;
+  background: var(--neutral-100);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--primary-color);
+}
+
+.coordinate-info h4 {
+  color: var(--neutral-700);
+  margin: 0 0 8px 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.coordinate-info p {
+  color: var(--neutral-600);
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}

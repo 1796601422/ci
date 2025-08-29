@@ -1,0 +1,128 @@
+.module3-container {
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-accent);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.module3-header {
+  height: 90px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  gap: 20px;
+  position: relative;
+}
+
+.module3-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+}
+
+.module3-header .back-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+}
+
+.module3-header .back-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.module3-header .header-content h1 {
+  margin: 0;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.module3-header .header-content p {
+  margin: 4px 0 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.module3-main {
+  display: flex;
+  flex: 1;
+  background: var(--neutral-50);
+  overflow: hidden;
+  justify-content: center;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.module3-main .left-panel {
+  width: 600px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  background: var(--neutral-50);
+}
+
+.module3-main .right-panel {
+  width: 1000px;
+  padding: 20px;
+  background: white;
+  border-left: 1px solid var(--neutral-200);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-y: auto;
+}
+
+.module3-main .right-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, var(--neutral-200) 0%, transparent 50%, var(--neutral-200) 100%);
+}
+
+/* 滚动条样式 */
+.module3-main .left-panel::-webkit-scrollbar,
+.module3-main .right-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.module3-main .left-panel::-webkit-scrollbar-track,
+.module3-main .right-panel::-webkit-scrollbar-track {
+  background: var(--neutral-100);
+  border-radius: 3px;
+}
+
+.module3-main .left-panel::-webkit-scrollbar-thumb,
+.module3-main .right-panel::-webkit-scrollbar-thumb {
+  background: var(--neutral-300);
+  border-radius: 3px;
+}
+
+.module3-main .left-panel::-webkit-scrollbar-thumb:hover,
+.module3-main .right-panel::-webkit-scrollbar-thumb:hover {
+  background: var(--neutral-400);
+}

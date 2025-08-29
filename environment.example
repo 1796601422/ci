@@ -1,0 +1,15 @@
+# 环境变量配置示例
+# 复制此文件为 .env 并根据需要修改
+
+# 生产环境配置
+GENERATE_SOURCEMAP=false
+INLINE_RUNTIME_CHUNK=false
+
+# React应用配置
+REACT_APP_NAME=词向量教学演示系统
+REACT_APP_VERSION=1.0.0
+REACT_APP_DESCRIPTION=面向初中生的词向量教学演示系统
+
+# 构建优化
+BUILD_PATH=build
+CI=true

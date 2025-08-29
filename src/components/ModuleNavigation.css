@@ -1,0 +1,206 @@
+.module-navigation {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  max-width: none;
+  margin: 0;
+  border: none;
+  position: relative;
+  overflow: visible;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.module-navigation::before {
+  display: none;
+}
+
+.nav-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 25px 20px;
+  background: white;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--neutral-200);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.nav-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+}
+
+.nav-header h2 {
+  color: var(--neutral-800);
+  font-size: 2rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-header p {
+  color: var(--neutral-600);
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+.nav-modules {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 0 0 auto;
+}
+
+.nav-module {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid var(--neutral-200);
+  border-radius: var(--radius-lg);
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  position: relative;
+  min-height: 90px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-module::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.nav-module:hover:not(.disabled) {
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  color: white;
+}
+
+.nav-module:hover:not(.disabled)::before {
+  opacity: 1;
+}
+
+.nav-module:hover:not(.disabled) .module-content h3,
+.nav-module:hover:not(.disabled) .module-content p {
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-module:hover:not(.disabled) .module-icon {
+  position: relative;
+  z-index: 1;
+}
+
+.nav-module.active {
+  border-color: var(--primary-color);
+  background: var(--primary-ultra-light);
+  box-shadow: var(--shadow-md);
+}
+
+.nav-module.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: var(--neutral-50);
+}
+
+.module-icon {
+  font-size: 2.5rem;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.module-content {
+  flex: 1;
+}
+
+.module-content h3 {
+  color: var(--neutral-800);
+  margin: 0 0 4px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.module-content p {
+  color: var(--neutral-600);
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.coming-soon {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: var(--warning-color);
+  color: white;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .module-navigation {
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .nav-header h2 {
+    font-size: 1.6rem;
+  }
+  
+  .nav-header p {
+    font-size: 1rem;
+  }
+  
+  .nav-module {
+    padding: 16px;
+    min-height: 70px;
+  }
+  
+  .module-icon {
+    font-size: 2rem;
+    margin-right: 16px;
+  }
+  
+  .module-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .module-content p {
+    font-size: 0.9rem;
+  }
+}

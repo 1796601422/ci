@@ -1,0 +1,193 @@
+.similarity-explanation {
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  height: 300px;
+  overflow-y: auto;
+}
+
+.similarity-explanation h3 {
+  color: #1e293b;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.explanation-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #64748b;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.center-word-info {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  padding: 8px 12px;
+  border-radius: 6px;
+  border-left: 3px solid #10b981;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.center-word-label {
+  color: #065f46;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.center-word-value {
+  color: #10b981;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.similarity-stats {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.stat-item {
+  flex: 1;
+  text-align: center;
+  background: #f8fafc;
+  padding: 8px 4px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.stat-number {
+  display: block;
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.stat-label {
+  color: #64748b;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.words-analysis {
+  margin-bottom: 12px;
+}
+
+.word-group {
+  margin-bottom: 12px;
+}
+
+.group-title {
+  color: #374151;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.group-title.related {
+  color: #059669;
+}
+
+.group-title.unrelated {
+  color: #dc2626;
+}
+
+.word-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.word-item {
+  display: grid;
+  grid-template-columns: 60px 1fr 40px 60px;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 6px;
+  background: #f8fafc;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+}
+
+.word-name {
+  color: #374151;
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
+.similarity-bar {
+  height: 4px;
+  background: #e2e8f0;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.similarity-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.similarity-value {
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.similarity-label {
+  color: #64748b;
+  font-size: 0.6rem;
+  text-align: center;
+}
+
+.explanation-theory {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #f59e0b;
+}
+
+.explanation-theory h4 {
+  color: #92400e;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.explanation-theory p {
+  color: #78350f;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.explanation-theory strong {
+  color: #92400e;
+  font-weight: 600;
+}
+
+/* 滚动条样式 */
+.similarity-explanation::-webkit-scrollbar {
+  width: 4px;
+}
+
+.similarity-explanation::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 2px;
+}
+
+.similarity-explanation::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 2px;
+}
+
+.similarity-explanation::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
